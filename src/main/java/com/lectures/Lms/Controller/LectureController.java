@@ -33,4 +33,11 @@ public class LectureController {
         return lectureServices.updateLecture(lecture);
     }
 
+    @DeleteMapping("/lectures/{id}")
+    public String deleteLecture(@PathVariable int id) {
+        return lectureServices.deleteLecture(id);
+
+    }
+
+
 }

@@ -31,5 +31,11 @@ public class LectureServices {
         return lecture.getName() + "'s contents has been updated successfully";
     }
 
+    public String deleteLecture(int id) {
+        lectureRepository.deleteById(id);
+        return "Lecture with id " + id + " has been successfully deleted";
+    }
+
+
 
 }
