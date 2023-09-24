@@ -21,5 +21,9 @@ public class LectureServices {
         Optional<LectureData> lecture = lectureRepository.findById(id);
         return lecture.orElse(null);
     }
+    public String addLecture(LectureData lecture) {
+        lectureRepository.save(lecture);
+        return lecture.getName() + " has been successfully added";
+    }
 
 }
