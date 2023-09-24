@@ -28,5 +28,9 @@ public class LectureController {
         return lectureServices.addLecture(lecture);
     }
 
+    @PutMapping("/lectures")
+    public String updateStudent(@RequestBody LectureData lecture){
+        return lectureServices.updateLecture(lecture);
+    }
 
 }

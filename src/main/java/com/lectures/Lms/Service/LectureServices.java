@@ -26,4 +26,10 @@ public class LectureServices {
         return lecture.getName() + " has been successfully added";
     }
 
+    public String updateLecture(LectureData lecture) {
+        lectureRepository.save(lecture);
+        return lecture.getName() + "'s contents has been updated successfully";
+    }
+
+
 }
